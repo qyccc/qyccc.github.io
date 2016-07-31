@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>my new post | qyccc&#39;s blog</title>
+  <title>qyccc&#39;s blog</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -218,36 +218,49 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2016-07-12T08:29:49.000Z" itemprop="datePublished">
-          2016-07-12
+      <time datetime="2016-07-31T10:21:12.678Z" itemprop="datePublished">
+          2016-07-31
       </time>
     
 </span>
-                <h1>my new post</h1>
+                <h1></h1>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<p>categories: blog #文章文类</p>
-<h2 id="tags-博客，文章-文章标签，多于一项时用这种格式"><a href="#tags-博客，文章-文章标签，多于一项时用这种格式" class="headerlink" title="tags: [博客，文章] #文章标签，多于一项时用这种格式"></a>tags: [博客，文章] #文章标签，多于一项时用这种格式</h2><p>#这里是正文，用markdown写，使用方法参照我原来的博客<a href="http://zipperary.com/2013/05/22/introduction-to-markdown/" target="_blank" rel="external">Introduction to markdown</a></p>
+      		<hr>
+<p>title: 一周总结date: 2016-07-31 16:29:49<br>tags:<br>1、JavaScript replace函数。replace() 方法用于在字符串中用一些字符替换另一些字符，或替换一个与正则表达式匹配的子串。<br>语法stringObject.replace(regexp/substr,replacement)。</p>
+<p>2、正则表达式<br>\ 做为转意，即通常在”\”后面的字符不按原来意义解释，如/b/匹配字符”b”，当b前面加了反斜杆后/\b/，转意为匹配一个单词的边界。<br>-或-<br>对正则表达式功能字符的还原，如”<em>“匹配它前面元字符0次或多次，/a</em>/将匹配a,aa,aaa，加了”\”后，/a*/将只匹配”a*”。<br>^ 匹配一个输入或一行的开头，/^a/匹配”an A”，而不匹配”An a”<br>$ 匹配一个输入或一行的结尾，/a$/匹配”An a”，而不匹配”an A” </p>
+<ul>
+<li>匹配前面元字符0次或多次，/ba*/将匹配b,ba,baa,baaa </li>
+</ul>
+<ul>
+<li>匹配前面元字符1次或多次，/ba<em>/将匹配ba,baa,baaa<br>? 匹配前面元字符0次或1次，/ba</em>/将匹配b,ba</li>
+</ul>
+<p>3、web-config。Web.config文件是一个XML文本文件，它用来储存 ASP.NET Web 应用程序的配置信息（如最常用的ASP.NETWeb 应用程序的身份验证方式），它可以出现在应用程序的每一个目录中。当你通过VB.NET新建一个Web应用程序后，默认情况下会在根目录自动创建一个认的Web.config文件，包括默认的配置设置，所有的子目录都继承它的配置设置。如果你想修改子目录的配置设置，你可以在该子目录下新建一Web.config文件。它可以提供除从父目录继承的配置信息以外的配置信息，也可以重写或修改父目录中定义的设置。<br>在web项目中配置数据库，</p>
+<connectionstrings><br>&lt;add name=”con” connectionString=”Database=; server=; Integrated Security=false;Uid= ;Password=;providerName=”System.Data.SqlClient”/&gt;<br></connectionstrings>
+
+<p>4、ajax。<br>传统ajax写法<br>①：创建xmlHttpRequest对象<br>var xmlHttp = creatHttpRequest();<br>②：绑定回调函数<br>xmlHttp.onreadystatechange = function(){……}<br>③：建立连接<br>xmlHttp.open(“GET”,”url”);<br>④：发送数据<br>xmlHttp.send(null) //GET请求<br>如果是POST请求需要设置编码格式：<br>xmlHttp.setRequestHeader(“CONTENT-TYPE”,”application/x-www-form-urlencoded”);<br>xmlHttp.send(“key=value?key=value”)<br>⑤：书写回调函数<br>if(readyState == 4){<br>if(status ==200){<br>……<br>//操作xmlHttp.responseText主要针对返回HTML片段和json<br>//操作xmlHttp.responseXML主要针对返回XML片段。<br>}<br>}<br>jQuery提供了最底层的Ajax调用方法：<br>$.ajax{<br> type:”POST”<br> url: “some.php”<br> data: “name=John&amp;location=Boston”,<br> success: function(msg){<br> alert( “Data Saved: “ + msg );}<br>}<br>因为使用比较繁琐，所以在实际开发中，应用很少<br>为了简化Ajax开发，jQuery提供了对$.ajax（）进一步的封装方法$load、$get、$post。这三个方法不支持跨域，$getJSON、$getScript支持跨域。</p>
+<p>5、C#中context。指的是 进程间占有的资源空间。<br>当一个进程时间片到了或者资缺的时候就会让出cpu 当另一个进程开始始用CPU之前,系统要保存即将退出进程的执行状态,以便轮到时间片或有资源的时候现场恢复．这就所谓的上下文切换。</p>
+<p>using System;<br>using System.Web;<br>namespace Context<br>{   // 演示从业务类中生成一个 ASP.NET    // 跟踪语句。<br>public class TraceEmit<br>{<br> public void SomeMethod()<br>{<br>HttpContext _context = HttpContext.Current;    // 获取请求上下文<br>_context.Trace.Write(“在 TraceEmit.SomeMethod 中”);      // 使用上下文编写跟踪语句<br>}<br>}<br>}<br>Context 中的部分对象也已升级为 Page 中的顶级对象。例如，Page.Context.Response 和 Page.Response 指的是同一个对象，因此，以下代码是等价的： Response.Write (“您好”);   Context.Response.Write (“你好”);</p>
+<p>如何在用户经过身份验证后显示欢迎信息？<br>回答：测试 User 上下文对象以查看用户是否经过身份验证。如果是，还要从 User 对象获取用户名。</p>
+<p>6、sqlHelper。在 SqlHelper 类中实现的方法包括：<br>　　ExecuteNonQuery。此方法用于执行不返回任何行或值的命令。这些命令通常用于执行数据库更新，但也可用于返回存储过程的输出参数。<br>　　ExecuteReader。此方法用于返回 SqlDataReader 对象，该对象包含由某一命令返回的结果集。<br>　　ExecuteDataset。此方法返回 DataSet 对象，该对象包含由某一命令返回的结果集。<br>　　ExecuteScalar。此方法返回一个值。该值始终是该命令返回的第一行的第一列。<br>　　ExecuteXmlReader。此方法返回 FOR XML 查询的 XML 片段。<br>　　除了这些公共方法外，SqlHelper 类还包含一些专用函数，用于管理参数和准备要执行的命令。不管客户端调用什么样的方法实现，所有命令都通过 SqlCommand 对象来执行。在 SqlCommand 对象能够被执行之前，所有参数都必须添加到 Parameters 集合中，并且必须正确设置 Connection、CommandType、CommandText 和 Transaction 属性。SqlHelper 类中的专用函数主要用于提供一种一致的方式，以便向 SQL Server 数据库发出命令，而不考虑客户端应用程序调用的重载方法实现。SqlHelper 类中的专用实用程序函数包括：<br>　　AttachParameters：该函数用于将所有必要的 SqlParameter 对象连接到正在运行的 SqlCommand。<br>　　AssignParameterValues：该函数用于为 SqlParameter 对象赋值。<br>　　PrepareCommand：该函数用于对命令的属性（如连接、事务环境等）进行初始化。<br>　　ExecuteReader：此专用 ExecuteReader 实现用于通过适当的 CommandBehavior 打开 SqlDataReader 对象，以便最有效地管理与阅读器关联的连接的有效期。 </p>
+<p>7、弹出窗口插件。<a href="http://layer.layui.com/" target="_blank" rel="external">http://layer.layui.com/</a></p>
+<p>学的比上周更少了<em>(:зゝ∠✿)</em>☜</p>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
         <nav class="pagination" role="pagination">
     
-    <a class="pull-left" href="/2016/07/24/一周总结/" style="float: left;">
-        ← 
-    </a>
     
-    
-    <a class="pull-right" href="/2016/07/12/hello-world/">
-        Hello World →
+    <a class="pull-right" href="/2016/07/24/一周总结/">
+         →
     </a>
     
 </nav>
 
         <div class="duoshuo">
-<div class="ds-thread" data-thread-key="2016/07/12/my-new-post/" data-title="my new post" data-url="http://yoursite.com/2016/07/12/my-new-post/"></div>
+<div class="ds-thread" data-thread-key="2016/07/31/一周总结1/" data-title="" data-url="http://yoursite.com/2016/07/31/一周总结1/"></div>
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"duoshuo_name"};
 (function() {

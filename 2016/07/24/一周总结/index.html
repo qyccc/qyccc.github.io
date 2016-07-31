@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>my new post | qyccc&#39;s blog</title>
+  <title>qyccc&#39;s blog</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -218,36 +218,47 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2016-07-12T08:29:49.000Z" itemprop="datePublished">
-          2016-07-12
+      <time datetime="2016-07-24T00:51:55.015Z" itemprop="datePublished">
+          2016-07-24
       </time>
     
 </span>
-                <h1>my new post</h1>
+                <h1></h1>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<p>categories: blog #文章文类</p>
-<h2 id="tags-博客，文章-文章标签，多于一项时用这种格式"><a href="#tags-博客，文章-文章标签，多于一项时用这种格式" class="headerlink" title="tags: [博客，文章] #文章标签，多于一项时用这种格式"></a>tags: [博客，文章] #文章标签，多于一项时用这种格式</h2><p>#这里是正文，用markdown写，使用方法参照我原来的博客<a href="http://zipperary.com/2013/05/22/introduction-to-markdown/" target="_blank" rel="external">Introduction to markdown</a></p>
+      		<hr>
+<p>title: my new post<br>date: 2016-07-24 16:29:49<br>tags:<br>1、javascript脚本在html中放置的位置。浏览器是按html顺序逐渐渲染，如果把js脚本放在前面，还要获取body元素中某一元素的id值是无法实现的，会出现Uncaught TypeError:cannot read property ‘…’ of nul。出现这个错误主要是因为这个元素还没有在html中加载，无法在js文件中获取。解决方式是，把脚本放在后。</p>
+<p>2、settimeout函数。setTimeout() 方法用于在指定的毫秒数后调用函数或计算表达式，语法setTimeout(code,millisec)。此函数的一大误解是等待执行此元素后的命令，此时命令并不是停止执行，而是如果后面有命令的话先执行后面的命令，等待相应毫秒数后，再执行此条命令。</p>
+<p>3、eval函数。新发现的一个很有趣的函数，eval() 函数可计算某个字符串，并执行其中的的 JavaScript 代码，代码要加引号。</p>
+<p>4、如果是希望停顿执行命令的话，建议如下函数，简单实用。<br>function sleep(d){<br>  for(var t = Date.now();Date.now() - t &lt;= d;);<br>}</p>
+<p>5、hash表。算法中常用，比如缓存。简单来说就是把一个数组str用来存储，这个数组就叫做哈希函数，str[a]=…..还是等我把MIT这课学了再补充。</p>
+<p>6、indexOf方法。indexOf（) 方法可返回某个指定的字符串值在字符串中首次出现的位置。 stringObject.indexOf(searchvalue,fromindex)。fromindex    可选的整数参数。规定在字符串中开始检索的位置。它的合法取值是 0 到 stringObject.length - 1。如省略该参数，则将从字符串的首字符开始检索。</p>
+<p>7、test() 方法用于检测一个字符串是否匹配某个模式.语法RegExpObject.test(string)，string一般是正则表达式</p>
+<p>8、charCodeAt() 方法可返回指定位置的字符的 Unicode 编码。这个返回值是 0 - 65535 之间的整数。方法 charCodeAt() 与 charAt() 方法执行的操作相似，只不过前者返回的是位于指定位置的字符的编码，而后者返回的是字符子串。语法stringObject.charCodeAt(index)</p>
+<p>9、prototype 属性使您有能力向对象添加属性和方法。语法object.prototype.name=value。利用这个属性可以在构造函数外进行属性和方法添加。</p>
+<p>10、push() 方法可向数组的末尾添加一个或多个元素，并返回新的长度。语法arrayObject.push(newelement1,newelement2,….,newelementX)</p>
+<p>11、css样式中的expression（），用来把CSS属性和Javascript表达式关联起来，这里的CSS属性可以是元素固有的属性，也可以是自定义属性。就是说CSS属性后面可以是一段Javascript表达式，CSS属性的值等于Javascript表达式计算的结果。比如说，expression(body.scrollTop + 50 + “px”)。CSS Expression的问题就在于它的计算频率要比想象的多出很多。不仅仅是在页面显示和缩放时，就是在页面滚动、乃至移动鼠标时都会要重新计算一次。给CSS Expression增加一个计数器可以跟踪表达式的计算频率。在页面中随便移动鼠标都可以轻松达到10000次以上的计算量。一个减少CSS Expression计算次数的方法就是使用一次性的表达式，它在第一次运行时将结果赋给指定的样式属性，并用这个属性来代替CSS Expression。</p>
+<p>好多是复制粘贴的，微小的工作，学的做的还是太少了<em>(:зゝ∠✿)</em>☜</p>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
         <nav class="pagination" role="pagination">
     
-    <a class="pull-left" href="/2016/07/24/一周总结/" style="float: left;">
+    <a class="pull-left" href="/2016/07/31/一周总结1/" style="float: left;">
         ← 
     </a>
     
     
-    <a class="pull-right" href="/2016/07/12/hello-world/">
-        Hello World →
+    <a class="pull-right" href="/2016/07/12/my-new-post/">
+        my new post →
     </a>
     
 </nav>
 
         <div class="duoshuo">
-<div class="ds-thread" data-thread-key="2016/07/12/my-new-post/" data-title="my new post" data-url="http://yoursite.com/2016/07/12/my-new-post/"></div>
+<div class="ds-thread" data-thread-key="2016/07/24/一周总结/" data-title="" data-url="http://yoursite.com/2016/07/24/一周总结/"></div>
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"duoshuo_name"};
 (function() {
