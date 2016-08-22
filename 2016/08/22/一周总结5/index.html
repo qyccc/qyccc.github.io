@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Archives | qyccc&#39;s blog</title>
+  <title>qyccc&#39;s blog</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -84,7 +84,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -213,46 +213,95 @@
 
         <!-- ============================ END Hero Image =========================== -->
       
-
-
-<section id="services">
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/07/12/my-new-post/">my new post</a></h4>
-                            
-                            <p><time datetime="2016-07-12T08:29:49.000Z"><a href="/2016/07/12/my-new-post/">2016-07-12</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/07/12/hello-world/">Hello World</a></h4>
-                            
-                            <p><time datetime="2016-07-12T03:03:09.528Z"><a href="/2016/07/12/hello-world/">2016-07-12</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-08-22T06:47:30.746Z" itemprop="datePublished">
+          2016-08-22
+      </time>
+    
+</span>
+                <h1></h1>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2">
+      		<hr>
+<p>title: 一周总结5—<br>学习ajax</p>
+<p>1.XMLHttpRequest对象<br>XMLHttpRequest 对象用于在后台与服务器交换数据。<br>创建 XMLHttpRequest 对象的语法：<br>xmlhttp=new XMLHttpRequest();<br>// code for IE6, IE5<br>  xmlhttp=new ActiveXObject(“Microsoft.XMLHTTP”);</p>
+<p>2.Open(string method,string url,boolean asynch,String username,string password)<br>指定和服务器端交互的HTTP方法，URL地址，即其他请求信息；<br>Method:表示http请求方法，一般使用”GET”,”POST”.<br>url：表示请求的服务器的地址；<br>asynch：表示是否采用异步方法，true为异步，false为同步；<br>后边两个可以不指定，username和password分别表示用户名和密码，提供http认证机制需要的用户名和密码。</p>
+<p>3、Send(content)<br>向服务器发出请求，如果采用异步方式，该方法会立即返回。<br>content可以指定为null表示不发送数据，其内容可以是DOM对象，输入流或字符串。</p>
+<p>4.onreadystatechange    存储函数（或函数名），每当 readyState 属性改变时，就会调用该函数。</p>
+<p>5.readyState<br>存有 XMLHttpRequest 的状态。从 0 到 4 发生变化。<br>0: 请求未初始化<br>1: 服务器连接已建立<br>2: 请求已接收<br>3: 请求处理中<br>4: 请求已完成，且响应已就绪</p>
+<p>6.status<br>200: “OK”<br>404: 未找到页面</p>
+<p>eg.</p>
+<html><br><head><br><script type="text/javascript"><br>function loadXMLDoc()<br>{<br>var xmlhttp;<br>if (window.XMLHttpRequest)<br>  {// code for IE7+, Firefox, Chrome, Opera, Safari<br>  xmlhttp=new XMLHttpRequest();<br>  }<br>else<br>  {// code for IE6, IE5<br>  xmlhttp=new ActiveXObject(“Microsoft.XMLHTTP”);<br>  }<br>xmlhttp.onreadystatechange=function()<br>  {<br>  if (xmlhttp.readyState==4 &amp;&amp; xmlhttp.status==200)<br>    {<br>    document.getElementById(“myDiv”).innerHTML=xmlhttp.responseText;<br>    }<br>  }<br>xmlhttp.open(“GET”,”/ajax/test1.txt”,true);<br>xmlhttp.send();<br>}<br></script><br></head><br><body><br><br><div id="myDiv"><h2>Let AJAX change this text</h2></div><br><button type="button" onclick="loadXMLDoc()">通过 AJAX 改变内容</button><br><br></body><br></html><html><br><head><br><script type="text/javascript"><br>function loadXMLDoc()<br>{<br>var xmlhttp;<br>if (window.XMLHttpRequest)<br>  {// code for IE7+, Firefox, Chrome, Opera, Safari<br>  xmlhttp=new XMLHttpRequest();<br>  }<br>else<br>  {// code for IE6, IE5<br>  xmlhttp=new ActiveXObject(“Microsoft.XMLHTTP”);<br>  }<br>xmlhttp.onreadystatechange=function()<br>  {<br>  if (xmlhttp.readyState==4 &amp;&amp; xmlhttp.status==200)<br>    {<br>    document.getElementById(“myDiv”).innerHTML=xmlhttp.responseText;<br>    }<br>  }<br>xmlhttp.open(“GET”,”/ajax/test1.txt”,true);<br>xmlhttp.send();<br>}<br></script><br></head><br><body><br><br><div id="myDiv"><h2>Let AJAX change this text</h2></div><br><button type="button" onclick="loadXMLDoc()">通过 AJAX 改变内容</button><br><br></body><br></html>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>无可奉告</p>
+<p>7.RegExp(pattern,attribute)正则表达式<br>参数 pattern 是一个字符串，指定了正则表达式的模式或其他正则表达式。<br>参数 attributes 是一个可选的字符串，包含属性 “g”、”i” 和 “m”，分别用于指定全局匹配、区分大小写的匹配和多行匹配。ECMAScript 标准化之前，不支持 m 属性。如果 pattern 是正则表达式，而不是字符串，则必须省略该参数。</p>
+<p>8.RegExpObject.lastIndex<br>说明<br>该属性存放一个整数，它声明的是上一次匹配文本之后的第一个字符的位置。<br>上次匹配的结果是由方法 RegExp.exec() 和 RegExp.test() 找到的，它们都以 lastIndex 属性所指的位置作为下次检索的起始点。这样，就可以通过反复调用这两个方法来遍历一个字符串中的所有匹配文本。<br>该属性是可读可写的。只要目标字符串的下一次搜索开始，就可以对它进行设置。当方法 exec() 或 test() 再也找不到可以匹配的文本时，它们会自动把 lastIndex 属性重置为 0。<br>重要事项：不具有标志 g 和不表示全局模式的 RegExp 对象不能使用 lastIndex 属性。<br>提示：如果在成功地匹配了某个字符串之后就开始检索另一个新的字符串，需要手动地把这个属性设置为 0。<br>eg.</p>
+<p><html></html></p>
+<body>
+
+<script type="text/javascript">
+var str = "The rain in Spain stays mainly in the plain";
+var patt1 = new RegExp("ain", "g");
+
+for(i = 0; i < 4; i++) 
+  {
+  patt1.test(str)
+  document.write("ain found. index now at: " + patt1.lastIndex);
+  document.write("<br />");
+  }
+</script>
+
+<p></p></body><br><br>result:<p></p>
+<p>ain found. index now at: 8<br>ain found. index now at: 17<br>ain found. index now at: 28<br>ain found. index now at: 43</p>
+<p>9.RegExpObject.exec(string)<br>参数    描述<br>string    必需。要检索的字符串。</p>
+<p>eg.<br>在本例中，我们将全局检索字符串中的 W3School：</p>
+<script type="text/javascript">
+var str = "Visit W3School"; 
+var patt = new RegExp("W3School","g");
+var result;
+while ((result = patt.exec(str)) != null)  {
+  document.write(result);
+  document.write("<br />");
+  document.write(patt.lastIndex);
+ }
+</script>
+
+<p>输出：<br>W3School<br>14</p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
+        <nav class="pagination" role="pagination">
+    
+    
+    <a class="pull-right" href="/2016/08/16/一周总结4/">
+        一周总结4 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2016/08/22/一周总结5/" data-title="" data-url="http://yoursite.com/2016/08/22/一周总结5/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"duoshuo_name"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 
